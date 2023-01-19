@@ -2,6 +2,6 @@
 
 git add .
 git commit -m "Funne Good Commit Message"
-git pull
-git push
+git pull origin main
+git push origin main
 goto loop
