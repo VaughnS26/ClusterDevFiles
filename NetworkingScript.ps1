@@ -1,9 +1,6 @@
 ﻿# This script parses the cloud-init networking data and updates the relevant settings.
-# It *should* be run by a scheduled task on system startup.
-# That scheduled task *should* redirect all relevant output to C:\Users\Administrator\Desktop\cloudinit.log
-# If the file does not exist, make sure Ansible is not deleting it. For debugging, run this script
-# *without* running Ansible.
-
+# It should be run by a scheduled task on system startup after resetting the system
+# This will also delete system reset scheduled task. That Scheduled task should be named "ResetSID"
 
 $yamlText = Get-Content D:\OPENSTACK\CONTENT\0000 -Raw
 If ($yamlText -match 'address\s((\d{1,3}\.){3}\d{1,3})') {
