@@ -53,3 +53,4 @@ New-NetIPAddress -InterfaceIndex $openAdapterIndex -DefaultGateway $gateway -IPA
 Set-DNSClientServerAddress -InterfaceIndex $openAdapterIndex -ServerAddresses $dnsServers
 Set-NetConnectionProfile -InterfaceIndex $openAdapterIndex -NetworkCategory "Private"
 
+C:\Windows\System32\schtasks.exe /delete /tn "ResetSID" /f
