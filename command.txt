@@ -1,0 +1,1 @@
+a sysprep.exe /generalize /oobe /reboot /unattend:C:\Users\Administrator\Desktop\answer.xml
