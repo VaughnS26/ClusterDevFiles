@@ -1,0 +1,22 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20230119204851
+Username: WIN-EM89317L4DJ\Administrator
+RunAs User: WIN-EM89317L4DJ\Administrator
+Machine: WIN-EM89317L4DJ (Microsoft Windows NT 10.0.14393.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe Z:\mssql\Install-SqlServer.ps1
+Process ID: 3232
+PSVersion: 5.1.14393.206
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14393.206
+BuildVersion: 10.0.14393.206
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is Z:\mssql\Install-SqlServer-2023-01-19T20-48-51.log
+SQLSERVER_ISOPATH environment variable not specified, using defaults
+ISO already downloaded, checking hashsum...
+Hash is NOT OK
+Downloading: https://download.microsoft.com/download/7/c/1/7c14e92e-bdcb-4f89-b7cf-93543e7112d1/SQLServer2019-x64-ENU-Dev.iso
