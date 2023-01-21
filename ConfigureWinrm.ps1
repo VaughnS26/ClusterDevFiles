@@ -11,6 +11,11 @@ function Configure-Winrm{
         New-Item -Path WSMan:\localhost\Listener -Transport HTTTPS -Address * -CertificateThumbPrint $cert.Thumbprint -Force
         New-NetFirewallRule -DisplayName 'winrm' -Name 'winrm' -Profile Any -LocalPort 5986 -Protocol TCP -Action Allow
         Restart-Service WinRM
+        While ((Get-Service WinRM).Status -eq "Running") {
+            echo "Waiting for Winrm to Restart"
+            sleep 2
+        }
+
     }
     
 }
