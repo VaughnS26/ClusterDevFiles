@@ -50,4 +50,9 @@ New-NetIPAddress -InterfaceIndex $openAdapterIndex -DefaultGateway $gateway -IPA
 Set-DNSClientServerAddress -InterfaceIndex $openAdapterIndex -ServerAddresses $dnsServers
 Set-NetConnectionProfile -InterfaceIndex $openAdapterIndex -NetworkCategory "Private"
 winrm quickconfig -quiet
+Enable-PSRemoting -Force  
+Set-Item wsman:\localhost\client\trustedhosts *
+net user Administrator Chiapet1
+
 C:\Windows\System32\schtasks.exe /delete /tn "ResetSID" /f
+
