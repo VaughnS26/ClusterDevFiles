@@ -49,5 +49,5 @@ If (($openAdapter | Get-NetIPConfiguration).IPv4DefaultGateway) {
 New-NetIPAddress -InterfaceIndex $openAdapterIndex -DefaultGateway $gateway -IPAddress $staticIp -PrefixLength $prefixBits
 Set-DNSClientServerAddress -InterfaceIndex $openAdapterIndex -ServerAddresses $dnsServers
 Set-NetConnectionProfile -InterfaceIndex $openAdapterIndex -NetworkCategory "Private"
-
+winrm quickconfig -quiet
 C:\Windows\System32\schtasks.exe /delete /tn "ResetSID" /f
