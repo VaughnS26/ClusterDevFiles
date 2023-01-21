@@ -12,5 +12,5 @@ function Configure-Winrm{
         New-NetFirewallRule -DisplayName 'winrm' -Name 'winrm' -Profile Any -LocalPort 5986 -Protocol TCP -Action Allow
         Restart-Service WinRM
     }
-    echo "The value of ConfigSSL is" $configSSL
+    
 }
