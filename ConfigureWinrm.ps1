@@ -11,8 +11,6 @@ function Configure-Winrm{
         New-Item -Path WSMan:\localhost\Listener -Transport HTTTPS -Address * -CertificateThumbPrint $cert.Thumbprint -Force
         New-NetFirewallRule -DisplayName 'winrm' -Name 'winrm' -Profile Any -LocalPort 5986 -Protocol TCP -Action Allow
         Restart-Service WinRM
-
     }
+    echo "The value of ConfigSSL is" $configSSL
 }
-
-#I think this will setup winRM, didn't know if I should do something else.
