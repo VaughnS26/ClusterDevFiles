@@ -1,8 +1,8 @@
-function Configure-winrm{
+function Configure-Winrm{
     param (
     [bool]$configSSL
     )
-	winrm quickconfig -quiet
+    winrm quickconfig -quiet
     If ($configSSL) {
         
         $hostName = $env:COMPUTERNAME
