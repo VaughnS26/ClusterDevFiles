@@ -13,7 +13,7 @@
         $cert = New-SelfSignedCertificate -DnsName $hostName,$hostIP -CertStoreLocation "cert:\LocalMachine\My"
         New-WebBinding -Name "Default Web Site" -IP "*" -Port 443 -Protocol https
         cd IIS:\SslBindings\
-        get-item Cert:\LocalMachine\My\$cert.thumbprint | new-item 0.0.0.0!443
+        get-item ("Cert:\LocalMachine\My\" + $cert.thumbprint) | new-item 0.0.0.0!443
 
     }
 
