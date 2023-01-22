@@ -1,4 +1,4 @@
-function Enable-RDP {
+function Configure-RDP {
     param (
         [string[]] $Users
     )
