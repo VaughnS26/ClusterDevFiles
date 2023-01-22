@@ -9,6 +9,3 @@ function Enable-RDP {
         Add-LocalGroupMember -Group "Remote Desktop Users" -Member $User
     }
 }
-
-# Change users to actual users
-Enable-RDP -Users user1, user2
