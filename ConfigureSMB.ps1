@@ -1,8 +1,8 @@
-﻿function Configure-SMB{
+function Configure-SMB{
     
     param(
-        [string] $name = "default",
-        [string] $path = "C:\"
+        [string] $Name = "Files",
+        [string] $Path = "C:\"
         )
 
     $Parameters = @{
