@@ -3,8 +3,8 @@
 function Configure-DS {
 
     param(
-        [string] $domainName,
-        [string] $password
+        [string] $DomainName,
+        [string] $Password
         )
 
     #Install DNS features if not there
