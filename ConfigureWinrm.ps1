@@ -10,11 +10,11 @@ function Configure-Winrm{
         $cert = New-SelfSignedCertificate -DnsName $hostName,$hostIP -CertStoreLocation "cert:\LocalMachine\My"
         New-Item -Path WSMan:\localhost\Listener -Transport HTTTPS -Address * -CertificateThumbPrint $cert.Thumbprint -Force
         New-NetFirewallRule -DisplayName 'winrm' -Name 'winrm' -Profile Any -LocalPort 5986 -Protocol TCP -Action Allow
-        Restart-Service WinRM
-        While ((Get-Service WinRM).Status -ne "Running") {
-            echo "Waiting for Winrm to Restart"
-            sleep 2
-        }
+        #Restart-Service WinRM
+        #While ((Get-Service WinRM).Status -ne "Running") {
+        #    echo "Waiting for Winrm to Restart"
+        #    sleep 2
+        #}
 
     }
     
