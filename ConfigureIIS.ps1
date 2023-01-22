@@ -1,12 +1,13 @@
 ﻿function Configure-IIS {
     param (
-    [bool]$configSSL
+    [bool]$ConfigSSL
     )
 
     # Begin installation process
     Install-WindowsFeature -name Web-Server -IncludeManagementTools
-    if ($configSSL)
+    if ($ConfigSSL)
     {
+        Import-Module -name WebAdministration
         $hostName = $env:COMPUTERNAME
         $hostIP = (Get-NetAdapter | Get-NetIPAddress).IPv4Address | Out-String
         $cert = New-SelfSignedCertificate -DnsName $hostName,$hostIP -CertStoreLocation "cert:\LocalMachine\My"
