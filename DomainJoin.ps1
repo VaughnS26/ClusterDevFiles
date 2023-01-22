@@ -1,4 +1,4 @@
-function add-to-domain {
+function Join-Domain {
 	param (
 	[string] $Domain,
 	[string] $Password,
