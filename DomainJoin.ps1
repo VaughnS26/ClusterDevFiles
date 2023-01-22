@@ -1,9 +1,8 @@
 function add-to-domain {
 	param (
-	[string] $domain,
-	[string] $user,
-	[string] $password,
-	[string] $username
+	[string] $Domain,
+	[string] $Password,
+	[string] $Username
 	)
     $secpass = ConvertTo-SecureString -String $password -AsPlainText -force
 	$credential = New-Object System.Management.Automation.PSCredential $username, $secpass
