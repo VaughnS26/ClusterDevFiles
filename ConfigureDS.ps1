@@ -12,5 +12,5 @@ function Configure-DS {
     $pw = ConvertTo-SecureString $password -AsPlainText -Force
     $domainName -Match "([^.]*)(\.|$)"
     $netbiosName = $Matches.1
-    Install-ADDSForest -DomainName $domainName -DomainNetbiosName $netbiosName -InstallDNS -Force -SafeModeAdministratorPassword $pw -NoRebootOnCompletion
+    Install-ADDSForest -DomainName $domainName -DomainNetbiosName $netbiosName -InstallDNS -Force -SafeModeAdministratorPassword $pw
 }
